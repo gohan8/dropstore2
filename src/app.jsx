@@ -2,8 +2,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductListPage from './pages/ProductListPage';
 import ProductPage from './pages/ProductPage';
-import CheckoutPage from './pages/checkoutPage';
-import DashboardPage from './pages/cashboardPage';
+import CheckoutPage from './pages/CheckoutPage';
+import DashboardPage from './pages/DashboardPage';
 import Navbar from './components/navbar';
 
 export default function App() {
