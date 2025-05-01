@@ -1,11 +1,10 @@
 // src/services/api.js
 import axios from 'axios';
-import dorenv from 'dotenv';
+import dotenv from 'dotenv';
 
 const api ={
   ali: axios.create({
-  baseURL: dotenv.env.ALI_API_BASE, //'https://sua-api-node.onrender.com', // Altere para o endereço do seu backend
-  }),
+  baseURL: dotenv.env.ALI_API_BASE}),
   mock: ()=> return [
     { nome: 'Product A',  preco: 100.00, descricao: `  This is a fake product for showing 
 something when the fetch to aliexpress api fails during development.
@@ -18,7 +17,5 @@ the stores template for displaying products to the user.
   You will like it. Just BUY it. NOW!`}
   ],
 }
-
-
 
 export default api;
