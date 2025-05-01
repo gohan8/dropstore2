@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProductList from './pages/ProductList';
+import ProductListPage from './pages/ProductListPage';
 import ProductPage from './pages/productPage';
 import CheckoutPage from './pages/checkoutPage';
 import DashboardPage from './pages/cashboardPage';
