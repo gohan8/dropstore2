@@ -1,5 +1,5 @@
 // src/pages/CheckoutPage.jsx
-import Checkout from '../components/Checkout';
+import Checkout from '../components/checkout';
 
 export default function CheckoutPage() {
   return (
