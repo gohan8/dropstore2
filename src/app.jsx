@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
+import ProdcutList from './pages/ProdutcList';
 import ProductPage from './pages/productPage';
 import CheckoutPage from './pages/checkoutPage';
 import DashboardPage from './pages/cashboardPage';
@@ -12,7 +12,7 @@ export default function App() {
       <Navbar />
       <div className="container mx-auto mt-6">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProdcutList />} />
           <Route path="/produto/:id" element={<ProductPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
