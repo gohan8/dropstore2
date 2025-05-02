@@ -8,7 +8,7 @@ export default function ProductDetail({ productId }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get(`/api/products/${productId}`)
+    api.axios.get(`/api/products/${productId}`)
       .then(res => setProduto(res.data))
       .catch(err => console.error('Erro ao carregar produto:', err));
   }, [productId]);
