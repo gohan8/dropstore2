@@ -12,7 +12,7 @@ export default function ProductList() {
       .catch(err => {
         console.error('Erro ao carregar produtos:', err);
         setProdutos(api.mock())
-      );
+      });
   }, []);
 
   return (
