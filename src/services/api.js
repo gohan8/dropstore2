@@ -1,6 +1,8 @@
 // src/services/api.js
 import axios from 'axios';
+import dotenv from 'dotenv'
 
+dotenv.config()
 if (!process.env.ALI_API_BASE) {
   throw new Error('ALI_API_BASE environment variable is not set');
 }
