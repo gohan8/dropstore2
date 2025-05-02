@@ -2,6 +2,9 @@
 import axios from 'axios';
 
 dotenv.config();
+if (!process.env.ALI_API_BASE) {
+  throw new Error('ALI_API_BASE environment variable is not set');
+}
 const api ={
   ali: axios.create({
   baseURL: process.env.ALI_API_BASE}),
