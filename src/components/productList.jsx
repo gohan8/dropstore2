@@ -10,7 +10,7 @@ export default function ProductList() {
     api.axios.get('/api/products')
       .then(res => setProdutos(res.data))
       .catch(err => {
-        console.error('Erro ao carregar produtos:', err)
+        console.error('Erro ao carregar produtos:', err);
         setProdutos(api.mock())
       );
   }, []);
