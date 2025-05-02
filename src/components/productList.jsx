@@ -7,9 +7,12 @@ export default function ProductList() {
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
-    api.get('/api/products')
+    api.axios.get('/api/products')
       .then(res => setProdutos(res.data))
-      .catch(err => console.error('Erro ao carregar produtos:', err));
+      .catch(err => {
+        console.error('Erro ao carregar produtos:', err)
+        setProdutos(api.mock())
+      );
   }, []);
 
   return (
