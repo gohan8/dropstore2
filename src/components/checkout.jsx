@@ -13,7 +13,7 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post('/api/order', { cliente, produto });
+      const res = await api.axios.post('/api/order', { cliente, produto });
       alert('Pedido criado com sucesso!');
       navigate('/dashboard', { state: { cpf: cliente.cpf } });
     } catch (err) {
@@ -29,8 +29,7 @@ export default function Checkout() {
       <h2 className="text-xl font-bold">Produto: {produto.nome}</h2>
       {['nome', 'email', 'cpf', 'telefone'].map(campo => (
         <input
-          key={campo}
-          required
+          key={campo} required
           placeholder={campo.toUpperCase()}
           className="w-full border p-2 rounded"
           value={cliente[campo]}
