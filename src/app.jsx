@@ -12,7 +12,7 @@ export default function App() {
       <Navbar />
       <div className="container mx-auto mt-6">
         <Routes>
-          <Route path="/" element={<ProductList />} />
+          <Route path="/" element={<ProductListPage />} />
           <Route path="/produto/:id" element={<ProductPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
