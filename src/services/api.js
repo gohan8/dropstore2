@@ -2,12 +2,12 @@
 import axios from 'axios';
 
 
-if (!process.env.ALI_API_BASE) {
+if (!import.meta.env.ALI_API_BASE) {
   throw new Error('ALI_API_BASE environment variable is not set');
 }
 const api ={
   ali: axios.create({
-  baseURL: process.env.ALI_API_BASE}),
+  baseURL: import.meta.env.ALI_API_BASE}),
   mock: ()=> {return [
     { nome: 'Product A',  preco: 100.00, descricao: `  This is a fake product for showing 
 something when the fetch to aliexpress api fails during development.
