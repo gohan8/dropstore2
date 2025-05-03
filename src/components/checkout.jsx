@@ -13,7 +13,7 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.axios.post('/api/order', { cliente, produto });
+      const res = await api.ali.post('/api/order', { cliente, produto });
       alert('Pedido criado com sucesso!');
       navigate('/dashboard', { state: { cpf: cliente.cpf } });
     } catch (err) {

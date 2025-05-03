@@ -10,7 +10,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (cpf) {
-      api.axios.post('/api/pedidos-cliente', { cpf })
+      api.ali.post('/api/pedidos-cliente', { cpf })
         .then(res => setPedidos(res.data))
         .catch(err => console.error('Erro ao buscar pedidos:', err));
     }
